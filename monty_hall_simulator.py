@@ -17,7 +17,9 @@ import random
 #print(prize)
 
 
-def monty_hall(sims, choice):
+def monty_hall():
+    choice = input("In this simulation there are three doors.\nBehind one is a car.\nBehind the other two are goats.\nYou have been randomly assigned a door.\nIt has been revealed that a goat is behind\none of the doors you were not assigned.\nEnter '1' to win the prize behind the door you originally selected\nor '2' to receive the prize behind the mystery door: ")
+    sims = int(input("how many simulations do you wish to run? "))
     count = 0
     cars = 0
     while count < sims:
@@ -40,7 +42,4 @@ def monty_hall(sims, choice):
                 cars +=1
     print("you won the car " + str(cars) + " out of " + str(sims) + " simulations")
 
-
-choice = input("In this simulation there are three doors.\nBehind one is a car.\nBehind the other two are goats.\nYou have been randomly assigned a door.\nIt has been revealed that a goat is behind\none of the doors you were not assigned.\nEnter '1' to win the prize behind the door you originally selected\nor '2' to receive the prize behind the mystery door: ")
-sims = int(input("how many simulations do you wish to run? "))
-monty_hall(sims, choice)
+monty_hall()
